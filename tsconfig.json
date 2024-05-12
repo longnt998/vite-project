@@ -11,6 +11,9 @@
     "noImplicitAny": false,
     "baseUrl": ".",
     "types": ["@types/node"],
+    "paths": {
+      "@/*": ["src/*"]
+    },
 
     /* Bundler mode */
     "moduleResolution": "bundler",

@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import svgLoader from 'vite-svg-loader'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import tailwindcss from 'tailwindcss'
@@ -21,6 +22,7 @@ export default defineConfig({
     plugins: [
         vue(),
         inheritAttrs(),
+        svgLoader(),
         AutoImport({
             dts: './src/auto-imports.d.ts',
             imports: ['vue', 'vue-router', 'vue-i18n', '@vueuse/core', 'vuex'],

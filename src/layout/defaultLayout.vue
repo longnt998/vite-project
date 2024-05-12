@@ -1,6 +1,5 @@
 <template>
     <div class="w-full h-screen flex flex-col">
-        <base-spinner></base-spinner>
         <DefaultHeader :is-open="isOpen" @toggle="toggleMenu" />
         <div class="flex h-full justify-start bg-main-primary-900 pt-[50px]">
             <div class="overflow-auto" :class="'w-full'">

@@ -1,5 +1,4 @@
 <template>
-    <base-spinner></base-spinner>
     <div class="flex h-screen mx-auto max-w-[1440px]">
         <div class="basis-1/2 h-full flex flex-col justify-center p-[20px] sp:hidden">
             <img src="@/assets/img/welcome_management.png" alt="" class="object-contain !h-[calc(100vh-40px)]" />
