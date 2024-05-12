@@ -150,6 +150,7 @@ const getList = async () => {
 
         data.value = response.data
         total.value = response.meta?.total ?? 0
+
     } catch (error) {
         //handle error
     }
