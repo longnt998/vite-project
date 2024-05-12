@@ -1,0 +1,18 @@
+import { createApp } from 'vue';
+import Toast from 'vue-toastification'
+import 'vue-toastification/dist/index.css'
+import './style.css';
+import i18n from './i18n'
+import router from '@/router/index'
+import App from './App.vue';
+import store from '@/store'
+import ToastPlugin from '@/plugins/toastPlugin'
+import setupVeeValidateI18n from '@/utils/vee-validate-rules'
+const app = createApp(App)
+
+app.use(router)
+app.use(store)
+app.use(Toast)
+app.use(i18n)
+app.use(ToastPlugin)
+app.mount('#app')

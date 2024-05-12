@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.card {
+  padding: 2em;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+}
+
+.el-table table {
+  width: 0 !important;
+  table-layout: fixed !important;
+}
+
+.el-table .el-table__body {
+  width: 0 !important;
+  table-layout: fixed !important;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  margin-right: 2px !important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #dbdbdb !important;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  opacity: 0.5 !important;
+  cursor: pointer !important;
+}
+
+.el-dropdown__popper.el-popper {
+  border-radius: 16px;
+}
+.el-switch__label * {
+  font-size: 12px !important;
+  font-weight: 500;
+  color: #0c1722;
+}
+
+.el-popper {
+  white-space: pre;
+}
+
+.Vue-Toastification__icon {
+  margin-top: 3px !important;
+}
+
+.el-select-dropdown__wrap {
+  padding-right: 8px !important;
+  padding-left: 8px !important;
+}
+
+.el-select-dropdown__item:hover {
+  border-radius: 8px;
+  background-color: #f8f8f8 !important;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+      color: #213547;
+      background-color: #ffffff;
+  }
+  a:hover {
+      color: #747bff;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #707070;
+  border-radius: 0.25rem;
+}

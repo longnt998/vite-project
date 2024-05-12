@@ -1,0 +1,20 @@
+const ERR_NETWORK = 'ERR_NETWORK'
+const ECONNABORTED = 'ECONNABORTED'
+
+const CODE_INVALID_CLIENT_REQUEST = 'invalid_client_request'
+const CODE_ACTION_CANNOT_DONE = 'action_cannot_done'
+const CODE_UNAUTHENTICATED = 'unauthenticated'
+const CODE_NOT_FOUND = 'not_found'
+const CODE_INVALID_REQUEST_DATA = 'invalid_request_data'
+const CODE_SERVER_ERROR = 'server_error'
+
+export {
+    ERR_NETWORK,
+    ECONNABORTED,
+    CODE_INVALID_CLIENT_REQUEST,
+    CODE_ACTION_CANNOT_DONE,
+    CODE_UNAUTHENTICATED,
+    CODE_NOT_FOUND,
+    CODE_INVALID_REQUEST_DATA,
+    CODE_SERVER_ERROR,
+}
