@@ -19,6 +19,7 @@ import {
 } from '@/constants'
 import { ResponseError, ToastType } from '@/types'
 import { showToast } from '@/utils/toastHelper'
+import i18n from '@/i18n'
 import store from '@/store'
 import router from '@/router'
 const instance = axios.create({
@@ -33,6 +34,7 @@ instance.interceptors.request.use(
     (config) => {
         config.headers.apiToken = import.meta.env.VITE_API_TOKEN
         // @ts-ignore
+        config.headers['Accept-Language'] = i18n.global.locale?.value
         config.headers.Authorization = 'Bearer ' + localStorage.getItem('access_token')
         return config
     },

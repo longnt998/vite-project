@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import svgLoader from 'vite-svg-loader'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
+import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import tailwindcss from 'tailwindcss'
 import { resolve } from 'path'
 import inheritAttrs from 'vite-plugin-vue-setup-inherit-attrs'
@@ -40,6 +41,10 @@ export default defineConfig({
             include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
             dirs: ['src/components/'],
             resolvers: [ElementPlusResolver()],
+        }),
+        VueI18n({
+            include: [resolve(__dirname, '../locales/**')],
+            runtimeOnly: false,
         }),
     ],
     build: {

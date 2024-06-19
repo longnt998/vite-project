@@ -1,3 +1,5 @@
 {
-    "required": "{field}を必ず入力してください。"
+    "required": "{field}を必ず入力してください。",
+    "max": "{field}には{value}文字以下の文字例を入力してください。",
+    "email": "有効な{field}を必ず入力してください。"
 }

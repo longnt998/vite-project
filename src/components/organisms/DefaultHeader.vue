@@ -5,8 +5,12 @@
         </div>
         Header
         <div class="rounded-full w-[32px] h-[32px]">
-            <img :src="userInfo?.user_profile?.avatar_url ?? avatar_default" alt="" :title="userInfo?.name ?? null"
-                class="rounded-full w-full h-full" />
+            <img
+                :src="userInfo?.user_profile?.avatar_url ?? avatar_default"
+                alt=""
+                :title="userInfo?.name ?? null"
+                class="rounded-full w-full h-full"
+            />
         </div>
     </div>
 </template>
@@ -24,6 +28,7 @@ export default {
     emits: ['toggle'],
     data() {
         return {
+            avatar_default: avatar_default,
         }
     },
     computed: {

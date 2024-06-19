@@ -22,6 +22,11 @@ const homeRouter: Array<RouteRecordRaw> = [
                 name: 'user',
                 component: () => import('@/views/user/index.vue'),
             },
+            {
+                path: '/demo-input',
+                name: 'demo',
+                component: () => import('@/views/demo/index.vue'),
+            },
         ],
     },
 ]

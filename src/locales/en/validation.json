@@ -1,3 +1,5 @@
 {
-    "required": "Please enter your {field}."
+    "required": "Please enter your {field}.",
+    "max": "The {field} must not be greater than {value} characters.",
+    "email": "Please enter a valid email."
 }
