@@ -18,10 +18,10 @@ jobs:
         run: yarn install
 
       - name: secrets
-        run: Echo "${{ secrets.TEST }}"
+        run: echo "${{ secrets.TEST }}"
 
       - name: Variables
-        run: Echo "$TEST"
+        run: echo "$TEST"
 
       - name: TEST
-        run: Echo "Hello"
+        run: echo "Hello"
