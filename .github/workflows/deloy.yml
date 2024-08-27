@@ -25,7 +25,7 @@ jobs:
         run: echo ${{ vars.TEST }}
 
       - name: Variables 222
-        run: echo "$REPOSITORY_VAR hihihihihihihih"
+        run: echo "$REPOSITORY_VAR hihihihihihihihihih"
         env:
           REPOSITORY_VAR: ${{ vars.TEST }}
 
