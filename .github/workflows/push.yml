@@ -17,8 +17,13 @@ jobs:
       - name: Install
         run: yarn install
 
-      - name: Auto merge
-        if: github.event_name == 'pull_request'
-        uses: pascalgn/automerge-action@v0.14.3
+      - id: automerge
+        name: automerge
+        uses: "pascalgn/automerge-action@v0.15.6"
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          LOG: "DEBUG"  # or "TRACE"
+      - name: feedback
+        if: ${{ steps.automerge.outputs.mergeResult == 'merged' }}
+        run: |
+          echo "Pull request ${{ steps.automerge.outputs.pullRequestNumber }} merged!"
