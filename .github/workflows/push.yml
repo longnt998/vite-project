@@ -22,13 +22,13 @@ jobs:
     steps:
       - name: automerge
         uses: "pascalgn/automerge-action@v0.15.6"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          github_token: "${{ secrets.GITHUB_TOKEN }}"
           label: "automerge"
           delete_branch: false
           merge_method: "squash"
           merge_commit_message: "Merged by automerge-action"
-          log: "DEBUG" # or "TRACE"
       - name: feedback
         if: ${{ steps.automerge.outputs.mergeResult == 'merged' }}
         run: |
