@@ -1,0 +1,35 @@
+name: Deploy
+
+on:
+  pull_request_target:
+    types:
+      - closed
+    branches:
+      - develop
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+
+      - name: Install
+        run: yarn install
+
+      - name: secrets
+        run: echo "${{ secrets.TEST }}"
+
+      - name: Variables
+        run: echo ${{ vars.TEST }}
+
+      - name: Variables 222
+        run: echo "$REPOSITORY_VAR hihihihihih"
+        env:
+          REPOSITORY_VAR: ${{ vars.TEST }}
+
+      - name: TEST
+        run: echo "Hello"
+
