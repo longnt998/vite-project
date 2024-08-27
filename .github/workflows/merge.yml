@@ -1,0 +1,21 @@
+name: Deloy
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  php-artisan-test:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+
+      - name: Install
+        run: yarn install
+
+      - name: Deloy
+        run: Echo ${{ secrets.TEST }}
