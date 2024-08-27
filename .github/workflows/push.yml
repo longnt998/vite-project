@@ -1,9 +1,6 @@
-name: PHP Artisan Test
+name: Check
 
 on:
-  push:
-    branches:
-      - develop
   pull_request:
     branches:
       - develop
