@@ -28,6 +28,7 @@ jobs:
         uses: "pascalgn/automerge-action@v0.15.6"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          UPDATE_LABELS: "automerge"
         with:
           label: "automerge"
           delete_branch: false
