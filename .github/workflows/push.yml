@@ -22,8 +22,6 @@ jobs:
     steps:
       - name: automerge
         uses: "pascalgn/automerge-action@v0.15.6"
-        permissions:
-          contents: write
         with:
           github_token: "${{ secrets.GITHUB_TOKEN }}"
           label: "automerge"
