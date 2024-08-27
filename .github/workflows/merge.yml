@@ -1,4 +1,4 @@
-name: Deloy
+name: Deploy
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - develop
 
 jobs:
-  php-artisan-test:
+  deploy:
     runs-on: self-hosted
 
     steps:
@@ -30,3 +30,4 @@ jobs:
 
       - name: TEST
         run: echo "Hello"
+

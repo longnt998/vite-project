@@ -6,7 +6,7 @@ on:
       - develop
 
 jobs:
-  php-artisan-test:
+  check:
     runs-on: self-hosted
 
     steps:
@@ -22,7 +22,7 @@ jobs:
       contents: write
       pull-requests: write
       repository-projects: write
-    needs: php-artisan-test
+    needs: check
     steps:
       - name: automerge
         uses: "pascalgn/automerge-action@v0.15.6"
@@ -31,7 +31,6 @@ jobs:
         with:
           label: "automerge"
           delete_branch: false
-          merge_method: "squash"
           merge_commit_message: "Merged by automerge-action"
       - name: feedback
         if: ${{ steps.automerge.outputs.mergeResult == 'merged' }}
