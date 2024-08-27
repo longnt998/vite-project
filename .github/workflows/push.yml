@@ -13,12 +13,27 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-
       - name: Install
         run: yarn install
 
-      - name: Auto merge
-        if: github.event_name == 'pull_request'
-        uses: pascalgn/automerge-action@v0.14.3
+  auto_merge:
+    runs-on: self-hosted
+    permissions:
+      contents: write
+      pull-requests: write
+      repository-projects: write
+    needs: php-artisan-test
+    steps:
+      - name: automerge
+        uses: "pascalgn/automerge-action@v0.15.6"
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          label: "automerge"
+          delete_branch: false
+          merge_method: "squash"
+          merge_commit_message: "Merged by automerge-action"
+      - name: feedback
+        if: ${{ steps.automerge.outputs.mergeResult == 'merged' }}
+        run: |
+          echo "Pull request ${{ steps.automerge.outputs.pullRequestNumber }} merged!"
