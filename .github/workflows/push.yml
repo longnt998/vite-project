@@ -16,8 +16,12 @@ jobs:
       - name: Install
         run: yarn install
 
-  automerge:
-    runs-on: ubuntu-latest
+  auto_merge:
+    runs-on: self-hosted
+    permissions:
+      contents: write
+      pull-requests: write
+      repository-projects: write
     needs: php-artisan-test
     steps:
       - name: automerge
