@@ -17,5 +17,11 @@ jobs:
       - name: Install
         run: yarn install
 
-      - name: Deploy
-        run: Echo "${{ secrets.TEST }}"
+      - name: secrets
+        run: echo "${{ secrets.TEST }}"
+
+      - name: Variables
+        run: echo "$TEST"
+
+      - name: TEST
+        run: echo "Hello"
