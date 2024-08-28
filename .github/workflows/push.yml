@@ -13,7 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Cache Yarn dependenciess
+      - name: Cache Yarn dependenciesss
         uses: actions/cache@v3
         with:
           path: node_modules
