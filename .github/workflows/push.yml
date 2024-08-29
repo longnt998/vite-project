@@ -8,10 +8,22 @@ on:
 jobs:
   check:
     runs-on: self-hosted
+    timeout-minutes: 1
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: Sleep
+        run: sleep 2000
+
+      - name: Cache Yarn dependenciessss
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: yarn-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+              yarn-
 
       - name: Install
         run: yarn install
